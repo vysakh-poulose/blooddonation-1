@@ -1,0 +1,186 @@
+<html>
+        <head>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <link rel="stylesheet" href="styles/register_style.css">
+                <title>Blood Bank</title>
+                <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+                <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+                <!-- Font special for pages-->
+                <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+            
+                <!-- Vendor CSS-->
+                <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+                <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+            
+                <!-- Main CSS-->
+                <link href="styles/main.css" rel="stylesheet" media="all">
+                
+        </head>
+        <body>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">BLOOD BANK</a>
+                      
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                          <!-- <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Donate</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Login/Register</a>
+                            </li>
+                          </ul> -->
+                        </div>
+                </nav>
+
+                <div class="page-wrapper bg-gra-01 p-t-45 p-b-50">
+                        <div class="wrapper wrapper--w790">
+                            <div class="card card-5">
+                                <div class="card-heading">
+                                    <h2 class="title">Registration Form</h2>
+                                </div>
+                                <div class="card-body">
+                                    <form method="POST" action="/register">
+                                        <div class="form-row m-b-55">
+                                            <div class="name">Name</div>
+                                            <div class="value">
+                                                <div class="row row-space">
+                                                    <div class="col-2">
+                                                        <div class="input-group-desc">
+                                                            <input class="input--style-5 size_cor" type="text" name="first_name" required>
+                                                            <label class="label--desc size_cor">first name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <div class="input-group-desc correction">
+                                                            <input class="input--style-5 size_cor" type="text" name="last_name" required>
+                                                            <label class="label--desc size_cor">last name</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="name">User ID</div>
+                                            <div class="value">
+                                                <div class="input-group">
+                                                    <input class="input--style-5" type="text" name="user_id" placeholder="User ID" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-row">
+                                            <div class="name">Location</div>
+                                            <div class="value">
+                                                <div class="input-group">
+                                                    <input class="input--style-5" type="text" name="location" placeholder="Pincode , State" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="name">Email</div>
+                                            <div class="value">
+                                                <div class="input-group">
+                                                    <input class="input--style-5" type="email" name="email" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row m-b-55">
+                                            <div class="name">Phone</div>
+                                            <div class="value">
+                                                <div class="row row-refine">
+                                                    
+                                                    <div class="col-9">
+                                                        <div class="input-group-desc">
+                                                            <input class="input--style-5" type="number" name="phone" required>
+                                                            <label class="label--desc">Phone Number</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row m-b-55">
+                                            <div class="name">Password</div>
+                                            <div class="value">
+                                                <div class="row row-refine">
+                                                    
+                                                    <div class="col-9">
+                                                        <div class="input-group-desc">
+                                                            <input class="input--style-5" type="password" name="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required>
+                                                            <label class="label--desc">Password</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="name">Blood Group</div>
+                                            <div class="value">
+                                                <div class="input-group">
+                                                    <div class="rs-select2 js-select-simple select--no-search">
+                                                        <select name="blood" required>
+                                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                                            <option>A+</option>
+                                                            <option>A-</option>
+                                                            <option>B+</option>
+                                                            <option>B-</option>
+                                                            <option>AB+</option>
+                                                            <option>AB-</option>
+                                                            <option>O+</option>
+                                                            <option>O-</option>
+                                                        </select>
+                                                        <div class="select-dropdown"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="form-row p-t-20">
+                                            <label class="label label--block">Are you an existing customer?</label>
+                                            <div class="p-t-15">
+                                                <label class="radio-container m-r-55">Yes
+                                                    <input type="radio" checked="checked" name="exist">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="radio-container">No
+                                                    <input type="radio" name="exist">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div> -->
+                                        <div>
+                                            <button class="btn btn--radius-2 btn--red correction_but" type="submit">Register</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+
+                    
+                        <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        </body>
+</html>

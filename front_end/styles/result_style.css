@@ -1,0 +1,27 @@
+body{
+    background-color: #00bbbb;
+}
+
+input[type=submit] {
+    background: url(https://img.icons8.com/ios-glyphs/30/000000/phone-message.png);
+    background-repeat: no-repeat;
+    border: 0;
+    display: block;
+    height: 40px;
+    width: 40px;
+}
+
+.noentry{
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 3px solid white;
+    border-radius: 50px;
+    box-shadow: 5px 10px #888888;
+    background-color: white;
+    text-align: center;
+}
+
+.container-table100{
+    background: linear-gradient(45deg, #dddddd, #ffffff)
+}

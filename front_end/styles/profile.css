@@ -1,0 +1,82 @@
+.namepos{
+    width: 70%;
+    padding: 50px;
+    margin-bottom: 200px;
+    position: relative;
+    top: 100px;
+    left: 180px;
+    background-color: #ffffff;
+    border: 5px solid white;
+    border-radius: 50px;
+    box-shadow: 5px 10px #888888;
+}
+nav{
+    height: 100px;
+}
+body{
+    background: linear-gradient(45deg, #dddddd, #ffffff);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.inner_name{
+    position: relative;
+    left:90px;
+}
+
+.but_pos{
+    position: relative;
+    left: 230px;
+    top: 40px;
+}
+
+.button_base {
+    margin: 0;
+    border: 0;
+    font-size: 18px;
+    margin-top: -25px;
+    margin-left: -100px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.button_base:hover {
+    cursor: pointer;
+}
+
+/* ### ### ### 01 */
+.b01_simple_rollover {
+    color: #000000;
+    border: #000000 solid 1px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.b01_simple_rollover:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+hr { 
+    position: relative; 
+    width: 550px;
+    top: 20px; 
+    right: 58px;
+    border: none; 
+    height: 2px; 
+    background: black; 
+    margin-bottom: 50px; 
+} 
+
+h2{
+    position: relative;
+    left: 90px;
+}

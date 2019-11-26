@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Table V01</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <link rel="stylesheet" href="style/register_style.css">
+                <title>Blood Bank</title>
+                <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+                <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+                <!-- Font special for pages-->
+                <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+            
+                <!-- Vendor CSS-->
+                <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+                <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+            
+                <!-- Main CSS-->
+                <link href="styles/main.css" rel="stylesheet" media="all">
+                
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="styles/result_style.css">
+
+<!--===============================================================================================-->
+</head>
+<body>
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="#">BLOOD BANK</a>
+			  
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+				  <ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+					  <a class="nav-link active" href="/home">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/profile">Profile</a>
+					</li>
+					<li class="nav-item">
+                            <a class="nav-link" href="/messages">Messages</a>
+                    </li>
+					<li class="nav-item">
+						<a class="nav-link" href="/logout">Logout</a>
+					</li>
+				  </ul>
+				</div>
+		</nav>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+								<% if(obj.length==0){ %>
+									<h1 class="noentry">NO Matching Entries Found</h1>
+								<%}else{%>
+							<tr class="table100-head">
+								<th class="column1">Name</th>
+								<th class="column1">E-Mail</th>
+								<th class="column1">Number</th>
+								<th class="column1">Pincode</th>
+                                <th class="column1">Blood Group</th>
+                                <th class="column1">Send Message</th>
+							</tr>
+						</thead>
+						<tbody>
+								
+                                <%  for(var i=0;i<=obj.length-1;i++){ %>
+                                    <tr>
+										<form action="/selected_donor" method="POST">
+											<td class="column1"> <%=obj[i]["f_name"] + " " + obj[i]["l_name"] %></td>
+											<td class="column1"><%=obj[i]["email"]%></td>
+											<td class="column1"><%=obj[i]["phone"]%></td>
+											<td class="column1"><%=obj[i]["pin"]%></td>
+											<td class="column1"><%=obj[i]["blood"]%></td>
+											<input type="text" name="user_id" value= <%=obj[i]["user_id"] %>  hidden>
+											<th class="column1"><input type="submit" value=" " name="" id=""></th>
+										</form>
+                                    </tr>
+									<%  } %>
+								<%}%>
+								
+								
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main2.js"></script>
+
+</body>
+</html>

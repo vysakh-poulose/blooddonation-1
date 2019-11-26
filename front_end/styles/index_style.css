@@ -1,0 +1,94 @@
+body{
+  overflow-x: hidden;
+  background-color: #e2e2e2;
+}
+
+.navbar {
+    min-height: 80px;
+  }
+  
+  .navbar-brand {
+    padding: 0 15px;
+    height: 80px;
+    line-height: 80px;
+  }
+  
+  .navbar-toggle {
+    /* (80px - button height 34px) / 2 = 23px */
+    margin-top: 23px;
+    padding: 9px 10px !important;
+  }
+  
+  @media (min-width: 768px) {
+    .navbar-nav > li > a {
+      /* (80px - line-height of 27px) / 2 = 26.5px */
+      padding-top: 26.5px;
+      padding-bottom: 26.5px;
+      line-height: 27px;
+    }
+  }
+
+
+
+  /*search*/
+  /*search box css start here*/
+.search-sec{
+    padding: 2rem;
+}
+.search-slt{
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+@media (min-width: 992px){
+    .search-sec{
+        position: relative;
+        top: 100px;
+        left:150px;
+    }
+}
+
+@media (max-width: 992px){
+    .search-sec{
+        background: #1A4668;
+    }
+}
+
+
+h5{
+  text-align: right;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+hr{
+  color:white;
+  background-color: #ffffff;
+  height: 5px;
+}
+
+
+img{
+  width:90%;
+  height:250px;
+  position: relative;
+  top:90px;
+  left: 70px;
+}

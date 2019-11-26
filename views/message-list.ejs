@@ -1,0 +1,47 @@
+<html>
+    <head>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            
+            <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="styles/conv_style.css">
+            <title>Blood Bank</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">BLOOD BANK</a>
+              
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                      <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/profile">Profile</a>
+                    </li>
+                    <li class="nav-item active">
+                            <a class="nav-link" href="/messages">Messages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                  </ul>
+                </div>
+        </nav>
+        <div class="container">
+            <h3>Recent Conversations</h3>
+            <div class="innerdiv">
+                    <%  for(var i=0;i<=name.length-1;i++){ %>
+                        <form action="/indiv_msggg" method="POST">
+                            <button name="donor" value=<%= uid[i] %> class="input_button ripple"><h4><%= name[i] %> </h4></button>
+                        </form>
+                    <%  } %>   
+        </div>
+        </div>
+        <script src="https://use.fontawesome.com/ef6e5f935f.js"></script>
+    </body>
+</html>
